@@ -1,0 +1,215 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;padding:0
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url(../img/img_bd/04.jpg)  no-repeat;
+    background-size:100%;
+
+}
+input{
+    width: 100%;
+    height: 25px;
+    color: black;
+}
+/*提交按钮*/
+.sub{
+    width: 100px;
+    height: 40px;
+    margin:30px auto;
+
+
+}
+/*登录界面*/
+.login{
+    width: 350px;
+    height: 450px;
+    /*background-color:darkolivegreen;*/
+    position: absolute;
+    left:35%;
+    top:25%;
+    z-index: 100;
+    border:1px solid bisque;
+    /*box-shadow:  2px -2px 1px bisque;*/
+    background-image: url(../img/img_bd/04.jpg);
+}
+.login .logHead {
+    width: 100%;
+    height: 155px;
+    /*background-color:yellow;*/
+    text-align: center;
+    padding:30px;
+    box-sizing: border-box;
+}
+/*图片*/
+.login .logHead .round_icon{
+    width: 60px;
+    height: 60px;
+    display:flex;
+    border-radius:50%;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    margin:0 auto;
+}
+.login .logHead p{
+    line-height: 60px;
+    font-size:20px;
+}
+.login .logContent {
+    width: 100%;
+    height: 200px;
+    /*background-color:blue;*/
+    padding:20px 75px;
+    box-sizing: border-box;
+}
+/*输入框格式*/
+.login .logContent .inp{
+    width: 200px;
+    height: 40px;
+    /*background-color:black;*/
+    margin-bottom: 10px;
+
+}
+.login .logContent input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+    /*margin-left: 65px;*/
+    margin-top: -5px;
+    background: white;
+
+
+}
+.login .logContent .errormsg{
+    width: 200px;
+    height: 20px;
+    /*background-color:black;*/
+    margin-bottom: 5px;
+
+}
+
+/*注册界面*/
+.register{
+    width: 350px;
+    height: 450px;
+    /*background-color:blueviolet;*/
+    position: absolute;
+    left:38%;
+    top:20%;
+    border:1px solid bisque;
+
+    background-image: url(../img/img_bd/04.jpg);
+}
+.register .regHead{
+    width: 100%;
+    height: 80px;
+    /*background-color:red;*/
+
+}
+.register .regHead p{
+    font-size:30px;
+    font-family: "Adobe Caslon Pro",serif;
+    line-height:130px;
+    text-align: center;
+}
+.register .regContent{
+    width: 100%;
+    height: 370px;
+    /*background-color:blue;*/
+    padding:20px 75px;
+    box-sizing: border-box;
+
+}
+.register .regContent .inp{
+    width: 200px;
+    height: 40px;
+    /*background-color:black;*/
+    margin-bottom: 10px;
+}
+/*验证码框*/
+.register .regContent .inp .code{
+    width: 120px;
+    height: 25px;
+}
+/*验证码图片*/
+.register .regContent .inp .photo{
+    float:right;
+    width: 70px;
+    height: 25px;
+    /*background-color:yellow;*/
+    position:relative;
+    top:-20px;
+}
+
+a{
+    position:absolute;
+    right:36px;
+    bottom:80px;
+    text-decoration: none;
+    color:#fff;
+}
+.move1{
+    animation:move1 2s linear;
+}
+.move2{
+    animation:move2 2s linear forwards;
+}
+.move3{
+    animation:move3 2s linear;
+}
+.move4{
+    animation:move4 2s linear forwards;
+}
+@keyframes move1{
+    0%{
+        left:35%;
+    }
+    50%{
+        left:23%;
+    }
+    100%{
+        left: 35%
+    }
+}
+@keyframes move2{
+    0%{
+        left:38%;
+    }
+    50%{
+        left:50%;
+    }
+    100%{
+        left: 38%;
+        z-index: 999;
+    }
+}
+@keyframes move3{
+    0%{
+        left:35%;
+    }
+    50%{
+        left:23%;
+    }
+    100%{
+        left: 35%;
+        z-index: 999;
+    }
+}
+@keyframes move4{
+    0%{
+        left:38%;
+        z-index: 999;
+    }
+    50%{
+        left:50%;
+        /*z-index: 999;*/
+    }
+    65%{
+        z-index: 100;
+    }
+    100%{
+        left: 38%;
+        z-index: 1;
+    }
+}
