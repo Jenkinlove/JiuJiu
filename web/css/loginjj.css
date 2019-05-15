@@ -18,8 +18,11 @@ input{
     width: 100px;
     height: 40px;
     margin:30px auto;
-
-
+}
+.sub .btn_smt:hover{
+    font-family: "微软雅黑 Light";
+    cursor: pointer;
+    background: #79b870;
 }
 /*登录界面*/
 .login{
@@ -140,6 +143,22 @@ input{
     /*background-color:yellow;*/
     position:relative;
     top:-20px;
+}
+.register .regContent .inp .photo .imagecode{
+    width: 75px;
+    height: 27px;
+    margin-top: -10px;
+}
+.register .regContent .inp .photo .blurry{
+    cursor: pointer;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 150px;
+    font-size: 13px;
+    right: -75px !important;
+    bottom: -10px !important;
 }
 
 a{

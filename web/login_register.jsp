@@ -37,12 +37,18 @@
                 $("#form1").attr("action","${ctx}/saveUser");
                 $("form").submit();
             });
+
         })
+    </script>
+    <script type="text/javascript">
+        function getPic(){
+            $("#image_code").attr("src","${ctx}/checkCode?flag="+Math.random());
+        };
     </script>
 </head>
 <body>
 <!--登录界面-->
-<form id="form1" action="" method="post">
+<form id="form1" action="" method="get">
     <div class="login" id="login">
         <div class="logHead">
             <img src="${ctx}/img/img_user/user_image.jpg" class="round_icon" alt="">
@@ -54,13 +60,13 @@
                 <label style="color: red; font-size:20px; text-align: center;">${error}</label><br>
             </div>
             <div class="inp">
-                <input type="text" placeholder="username" name="username"
+                <input type="text" placeholder="username" name="uname"
                        value="${user.username}${uname}"
                        style="border-radius: 20px">
             </div>
 
             <div class="inp">
-                <input type="password" placeholder="password" name="password"
+                <input type="password" placeholder="password" name="pwd"
                        value="${user.password}${pwd}"
                        style="border-radius:20px;">
             </div>
@@ -68,7 +74,8 @@
                 <input type="checkbox" name="remember" value="yes" checked="checked">记住密码<br>
             </div>
             <div class="sub">
-                <input id="submit_log" type="submit" value="登录" style="border-radius:20px;">
+                <input class="btn_smt" id="submit_log" type="submit" value="登 录"
+                       style="border-radius:20px;">
 
             </div>
         </div>
@@ -90,14 +97,17 @@
             <div class="inp">
                 <div class="code"><input type="text" placeholder="请输入验证码" value=""
                                          style="border-radius: 20px"></div>
-                <div class="photo"><img
-                        src="" alt=""></div>
+                <div class="photo">
+                    <img class="imagecode" id="image_code" src="${ctx}/checkCode" alt="">
+                    <a class="blurry" id="newCode" onclick="getPic();">看不清楚，换一张</a>
+                </div>
             </div>
             <div class="sub">
-                <input id="submit_reg" type="submit" value="立即注册" style="border-radius:20px;">
+                <input class="btn_smt" id="submit_reg" type="submit" value="立即注册"
+                       style="border-radius:20px;">
 
             </div>
-            <a href="javascript:;" id="areg">点击登陆</a>
+            <a class="clicklogin" href="javascript:;" id="areg">点击登陆</a>
         </div>
     </div>
 </form>

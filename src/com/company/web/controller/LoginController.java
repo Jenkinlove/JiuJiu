@@ -15,11 +15,17 @@ import java.util.List;
 @Controller
 public class LoginController {
 
+    @Resource(name = "user")
+    User user;
+
     @Resource(name = "userService")
     UserService userService;
 
     @RequestMapping("login")
-    public String login(User user, String remember, Model model, HttpServletResponse response){
+    public String login(String uname,String pwd, String remember, Model model,
+                        HttpServletResponse response){
+        user.setUsername(uname);
+        user.setPassword(pwd);
         System.out.println(user+"--"+remember);
         //转发给业务层判断是否存在该用户
         try {
