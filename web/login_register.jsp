@@ -51,7 +51,7 @@
 <form id="form1" action="" method="get">
     <div class="login" id="login">
         <div class="logHead">
-            <img src="${ctx}/img/img_user/user_image.jpg" class="round_icon" alt="">
+            <img src="${ctx}/img/img_user/01.jpg" class="round_icon" alt="">
             <p>欢迎登陆纠纠</p>
         </div>
         <div class="logContent">

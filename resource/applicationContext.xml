@@ -23,6 +23,9 @@
     <bean id="userDao" class="com.company.dao.UserDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="answerDao" class="com.company.dao.AnswerDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
 
 
 </beans>

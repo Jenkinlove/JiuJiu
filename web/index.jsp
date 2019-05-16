@@ -1,16 +1,13 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: lenovo
-  Date: 2019/5/14
-  Time: 19:44
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+  String contextPath = request.getContextPath();
+  pageContext.setAttribute("ctx", contextPath);
+%>
 <html>
   <head>
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="${ctx}/answer">答案之书</a>
   </body>
 </html>

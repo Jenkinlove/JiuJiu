@@ -19,6 +19,7 @@ public class User {
     private String password;
     @Email(message = "邮箱格式不正确")
     private String email;
+    private String uimage;
 
     @Override
     public String toString() {
@@ -27,6 +28,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", uimage='" + uimage + '\'' +
                 '}';
     }
 }

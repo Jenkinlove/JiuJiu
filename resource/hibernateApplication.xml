@@ -41,6 +41,7 @@
         <property name="mappingResources">
             <list>
                 <value>com/company/domain/User.hbm.xml</value>
+                <value>com/company/domain/Answer.hbm.xml</value>
             </list>
         </property>
     </bean>
