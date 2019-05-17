@@ -54,5 +54,6 @@
     <orderEntry type="library" name="classmate" level="project" />
     <orderEntry type="library" name="mchange-commons-java-0.2.15" level="project" />
     <orderEntry type="library" name="druid-1.0.15" level="project" />
+    <orderEntry type="library" name="com.springsource.org.apache.commons.io-1.4.0" level="project" />
   </component>
 </module>
