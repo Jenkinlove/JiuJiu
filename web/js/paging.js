@@ -77,7 +77,6 @@
 			content += "<a id='nextPage'>下一页</a>";
 			content += "<a id=\"lastPage\">尾页</a>";
 			content += "<span class='totalPages'> 共<span>"+total+"</span>页 </span>";
-			content += "<span class='totalSize'> 共<span>"+totalNum+"</span>篇日记 </span>";
 			me.element.html(content);
 		},
 		//添加页面操作事件

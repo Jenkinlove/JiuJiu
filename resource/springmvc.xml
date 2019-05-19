@@ -18,15 +18,14 @@
     <!--静态资源访问-->
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven />
-    <!--配置视图解析器-->
-    <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/view/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>-->
-
     <!--文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
-
+   <!-- &lt;!&ndash;配置视图解析器&ndash;&gt;
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>-->
 </beans>
+

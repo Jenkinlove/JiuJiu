@@ -120,20 +120,12 @@
 
         });
     </script>
-    <style>
-        .img2{
-            float: left;
-        }
-       .file-item img{
-           float: left;
-       }
-    </style>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/upload" method="post" enctype="multipart/form-data">
+<%--<form action="${pageContext.request.contextPath}/upload" method="post" enctype="multipart/form-data">
     <input type="file" name="file">
     <input type="submit" value="上传">
-</form>
+</form>--%>
 
 <img src="${pageContext.request.contextPath}/upload/${fileName}" alt="" style="height: 200px;">
 
@@ -143,7 +135,7 @@
 <div id="uploader-demo">
     <!--用来存放item-->
     <div id="fileList" class="uploader-list"></div>
-    <div id="filePicker" class="img2">选择图片</div>
+    <div id="filePicker" >选择图片</div>
 </div>
 
 

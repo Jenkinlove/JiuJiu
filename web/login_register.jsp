@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%
     String contextPath = request.getContextPath();
     pageContext.setAttribute("ctx", contextPath);
@@ -30,25 +31,25 @@
     <script>
         $(function () {
             $("#submit_log").click(function () {
-                $("#form1").attr("action","${ctx}/login");
+                $("#form1").attr("action", "${ctx}/login");
                 $("form").submit();
             });
             $("#submit_reg").click(function () {
-                $("#form1").attr("action","${ctx}/saveUser");
+                $("#form1").attr("action", "${ctx}/saveUser");
                 $("form").submit();
             });
 
         })
     </script>
     <script type="text/javascript">
-        function getPic(){
-            $("#image_code").attr("src","${ctx}/checkCode?flag="+Math.random());
+        function getPic() {
+            $("#image_code").attr("src", "${ctx}/checkCode?flag=" + Math.random());
         };
     </script>
 </head>
 <body>
 <!--登录界面-->
-<form id="form1" action="" method="get">
+<form id="form1" action="" method="post">
     <div class="login" id="login">
         <div class="logHead">
             <img src="${ctx}/img/img_user/01.jpg" class="round_icon" alt="">
@@ -61,13 +62,13 @@
             </div>
             <div class="inp">
                 <input type="text" placeholder="username" name="uname"
-                       value="${user.username}${uname}"
+                       value="${empty user.username ? uname : user.username}"
                        style="border-radius: 20px">
             </div>
 
             <div class="inp">
                 <input type="password" placeholder="password" name="pwd"
-                       value="${user.password}${pwd}"
+                       value="${empty user.password ? pwd : user.password}"
                        style="border-radius:20px;">
             </div>
             <div class="remember" style="color:white;">
@@ -87,16 +88,28 @@
         <div class="regContent">
             <div class="inp"><input type="text" placeholder="请输入用户名" name="username"
                                     value="${user.username}"
-                                    style="border-radius: 20px"></div>
-            <div class="inp"><input type="password" placeholder="请输入密码" name="password"
-                                    value="${user.password}"
-                                    style="border-radius: 20px"></div>
-            <div class="inp"><input type="text" placeholder="请输入常用邮箱" name="email"
-                                    value="${user.email}"
-                                    style="border-radius: 20px"></div>
+                                    style="border-radius: 20px">
+                <label style="color: red; font-size:13px; text-align: center;">${username}</label><br>
+            </div>
+
+
             <div class="inp">
-                <div class="code"><input type="text" placeholder="请输入验证码" value=""
-                                         style="border-radius: 20px"></div>
+                <input type="password" placeholder="请输入密码" name="password"
+                       value="${user.password}"
+                       style="border-radius: 20px">
+                <label style="color: red; font-size:13px; text-align: center;">${password}</label><br>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="请输入常用邮箱" name="email"
+                       value="${user.email}"
+                       style="border-radius: 20px">
+                <label style="color: red; font-size:13px; text-align: center;">${email}</label><br>
+            </div>
+            <div class="inp">
+                <div class="code"><input type="text" name="checkCode" placeholder="请输入验证码" value=""
+                                         style="border-radius: 20px">
+                    <label style="color: red; font-size:13px; text-align: center;">${codeError}</label><br>
+                </div>
                 <div class="photo">
                     <img class="imagecode" id="image_code" src="${ctx}/checkCode" alt="">
                     <a class="blurry" id="newCode" onclick="getPic();">看不清楚，换一张</a>

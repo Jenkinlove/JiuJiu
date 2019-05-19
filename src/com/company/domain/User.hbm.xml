@@ -11,5 +11,11 @@
         <property name="email" column="email"/>
         <property name="uimage" column="uimage"/>
 
+        <!--一个用户对应多个纠结-->
+        <set name="entanglers" inverse="true" cascade="save-update,delete" lazy="false">
+            <key column="uid"></key>
+            <one-to-many class="com.company.domain.Entangler"/>
+        </set>
+
     </class>
 </hibernate-mapping>

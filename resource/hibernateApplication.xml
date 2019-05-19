@@ -42,6 +42,8 @@
             <list>
                 <value>com/company/domain/User.hbm.xml</value>
                 <value>com/company/domain/Answer.hbm.xml</value>
+                <value>com/company/domain/Entangler.hbm.xml</value>
+                <value>com/company/domain/EntanglerComment.hbm.xml</value>
             </list>
         </property>
     </bean>
@@ -49,7 +51,7 @@
     <!--配置事务管理器-->
     <bean id="transactionManager"
           class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-        <property name="sessionFactory" ref="sessionFactory"/>
+        <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
     <!--开启注解 增强-->
     <tx:annotation-driven transaction-manager="transactionManager"/>

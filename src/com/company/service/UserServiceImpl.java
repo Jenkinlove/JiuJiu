@@ -3,12 +3,14 @@ package com.company.service;
 import com.company.dao.UserDao;
 import com.company.domain.User;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Transactional
+@Transactional(isolation= Isolation.DEFAULT,propagation= Propagation.REQUIRED)
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
@@ -20,12 +22,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> checkUser(User user) throws Exception {
-        List<User> users = userDao.checkUser(user);
-        if(users.size()!=0){
-            return users;
-        }else {
-            throw new Exception("用户名或密码错误");
-        }
+    public User checkUser(User user) {
+        User resUser = userDao.checkUser(user.getUsername(),user.getPassword());
+        return resUser;
     }
 }
