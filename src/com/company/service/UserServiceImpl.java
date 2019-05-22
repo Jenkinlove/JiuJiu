@@ -10,8 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.List;
 
-@Transactional(isolation= Isolation.DEFAULT,propagation= Propagation.REQUIRED)
+/*@Transactional(isolation= Isolation.DEFAULT,propagation= Propagation.REQUIRED)*/
 @Service("userService")
+@Transactional
 public class UserServiceImpl implements UserService {
 
     @Resource(name = "userDao")

@@ -4,7 +4,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 body{
     width: 100%;
     height: 100%;
-    background: url(../img/img_bd/04.jpg)  no-repeat;
+    background: url(../img/img_bd/13.jpg)  no-repeat;
     background-size:100%;
 
 }
@@ -12,6 +12,19 @@ input{
     width: 100%;
     height: 25px;
     color: black;
+}
+.biaoti{
+    width: 600px;
+    height: 100px;
+    font-size:70px;
+    line-height: 100px;
+    text-align: center;
+    /*background-color: red;*/
+    margin:20px auto;
+    font-family: "Californian FB",serif;
+    /*text-decoration: line-through;*/
+    color: #6a9bcd;
+
 }
 /*提交按钮*/
 .sub{
@@ -35,7 +48,7 @@ input{
     z-index: 100;
     border:1px solid bisque;
     /*box-shadow:  2px -2px 1px bisque;*/
-    background-image: url(../img/img_bd/04.jpg);
+    background-image: url(../img/img_bd/06.jpg);
 }
 .login .logHead {
     width: 100%;
@@ -102,7 +115,7 @@ input{
     top:20%;
     border:1px solid bisque;
 
-    background-image: url(../img/img_bd/04.jpg);
+    background-image: url(../img/img_bd/06.jpg);
 }
 .register .regHead{
     width: 100%;
@@ -172,7 +185,7 @@ a{
     right:36px;
     bottom:80px;
     text-decoration: none;
-    color:#fff;
+    color:#444444;
 }
 .move1{
     animation:move1 2s linear;

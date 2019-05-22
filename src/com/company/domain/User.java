@@ -28,6 +28,9 @@ public class User {
     //一个用户对应多个纠结
     private Set<Entangler> entanglers=new HashSet<>();
 
+    //一个用户对应多个评论
+    private Set<EntanglerComment> comments=new HashSet<>();
+
     @Override
     public String toString() {
         return "User{" +
@@ -36,7 +39,6 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", uimage='" + uimage + '\'' +
-                ", entanglers=" + entanglers +
                 '}';
     }
 }

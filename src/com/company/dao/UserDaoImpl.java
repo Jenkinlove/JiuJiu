@@ -9,20 +9,23 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate5.HibernateCallback;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Transactional(readOnly = false)
 public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
     @Override
     public void saveUser(User user) {
-        this.getHibernateTemplate().execute(new HibernateCallback<User>() {
+        this.getHibernateTemplate().save(user);
+        /*this.getHibernateTemplate().execute(new HibernateCallback<User>() {
             @Override
             public User doInHibernate(Session session) throws HibernateException {
                 session.save(user);
                 return null;
             }
-        });
+        });*/
     }
 
     @Override

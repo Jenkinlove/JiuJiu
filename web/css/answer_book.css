@@ -1,0 +1,166 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;padding:0
+}
+body{
+    background-color: #fcf6ee;
+}
+/*标题*/
+.title{
+    width:100%;
+    height: 130px;
+    margin:0 auto;
+ 
+}
+img{
+    width: 100%;
+    height: 100%;
+
+}
+.title p{
+    width: 500px;
+    height: 100px;
+    position: relative;
+    font-size: 65px;
+    font-family: "Adobe Ming Std L",serif;
+    color: #82ad01;
+    left:30%;
+    overflow: hidden;
+    top:-120px;
+}
+/*规则*/
+.rule{
+    width: 450px;
+    height: 390px;
+    float:left;
+    margin-left:70px;
+}
+.rule button{
+    width: 240px;
+    height: 40px;
+    margin-left:100px;
+    font-size:20px;
+    background-color: #cabcd6;
+    color: #fdf6dd;
+    border:none;
+}
+.rule p{
+    line-height: 40px;
+    margin-left:40px;
+    font-size:20px;
+    color: #73d0b6;
+    animation:run 10s linear 1 ;
+}
+@keyframes run{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity:1;
+    }
+}
+/*答案之书*/
+.answer_book{
+    width: 600px;
+    height: 390px;
+  float:right;
+}
+ul{
+    width: 250px;
+    height: 300px;
+    /*border: 1px solid #000;*/
+    box-sizing: border-box;
+    position: relative;
+    left:150px;
+    top:50px;
+    transform: rotateY(5deg) rotateX(3deg);
+    transform-style: preserve-3d;
+
+}
+ul li{
+    list-style: none;
+    width: 250px;
+    height: 300px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+/*左侧面*/
+ul .book_left{
+    background-color: #f5e1ed;
+    border-left:1px solid #a7afb6;
+    transform: translateX(-125px) rotateY(90deg);
+}
+/*右侧*/
+ul li:nth-child(2){
+    background-color: #fdf6dd;
+transform: translateX(125px) rotateY(90deg);
+}
+/*上侧*/
+ul li:nth-child(3){
+    background-color: #fdf6dd;
+transform: translateY(-150px) rotateX(90deg);
+}
+/*下侧面*/
+ul .book_bottom{
+    background-color: #fdf6dd;
+    transform: translateY(150px) rotateX(90deg);
+}
+/*底部*/
+ul .book_back{
+    /*background-color: purple;*/
+    border:1px solid #a7afb6;
+    transform: translateZ(-100px);
+}
+/*内容正面*/
+ul .book_top_content{
+    background-image: url(../img/img_bd/neirong.jpg);
+    border-right:1px solid #a7afb6;
+    background-size:100% ;
+    transform: translateZ(100px);
+    animation: move 3s linear;
+    padding-top:90px;
+    padding-left:50px;
+    box-sizing: border-box;
+}
+ul .book_top_content p{
+    width: 150px;
+    height: 250px;
+    font-size:18px;
+    color: #444444;
+
+
+}
+/*封面内容*/
+@keyframes move {
+     0%{
+         opacity: 0;
+     }
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+ul li:nth-of-type(7){
+
+    background-image: url(../img/img_bd/fengmian.jpg);
+    border-right:1px solid #a7afb6;
+    background-size:100% ;
+    transform-origin: left center;
+    transition:all 3s 0s linear  ;
+    transform: translateZ(140px);
+
+
+}
+ul:hover li:nth-of-type(7){
+    transform:translateZ(140px) rotateY(-170deg) ;
+    box-shadow:5px 5px 6px #aaaaaa;
+    background-image: url(../img/img_bd/fankai2.jpg);
+}

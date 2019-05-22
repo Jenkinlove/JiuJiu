@@ -53,7 +53,20 @@ public class LoginController {
             response.addCookie(cookie);
 
             //重定向，让浏览器去跳转到指定的位置
-            return "redirect:/getAllEntangler";
+            /*return "redirect:/getPageData/1";*/
+            return "redirect:/getPageData/1";
         }
+
     }
+
+    @RequestMapping("loginout")
+    public String loginOut(HttpSession session){
+        //清空当前用户session
+        session.removeAttribute("resUser");
+        return "redirect:/getPageData/1";
+    }
+
+
+
+
 }

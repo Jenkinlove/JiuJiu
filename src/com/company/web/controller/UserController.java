@@ -35,6 +35,9 @@ public class UserController {
             }
             return "/login_register.jsp";
         }else{
+            if(user.getUimage()==null){
+                user.setUimage("01.jpg");
+            }
             System.out.println(user);
             System.out.println("Œ“¿¥¡À"+checkCode);
             System.out.println("code------"+session.getAttribute("validation_code"));

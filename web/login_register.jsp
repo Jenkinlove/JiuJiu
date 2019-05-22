@@ -48,6 +48,7 @@
     </script>
 </head>
 <body>
+<p class="biaoti"> Defeat Entanglement</p>
 <!--登录界面-->
 <form id="form1" action="" method="post">
     <div class="login" id="login">
@@ -71,7 +72,7 @@
                        value="${empty user.password ? pwd : user.password}"
                        style="border-radius:20px;">
             </div>
-            <div class="remember" style="color:white;">
+            <div class="remember" style="color:#444444;">
                 <input type="checkbox" name="remember" value="yes" checked="checked">记住密码<br>
             </div>
             <div class="sub">

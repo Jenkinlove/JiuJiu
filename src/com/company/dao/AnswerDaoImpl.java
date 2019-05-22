@@ -11,7 +11,7 @@ public class AnswerDaoImpl extends HibernateDaoSupport implements AnswerDao {
     @Override
     public Answer getAnswer() {
         Random random = new Random();
-        int id=random.nextInt(3)+1;
+        int id=random.nextInt(40)+1;
         Answer answer = this.getHibernateTemplate().get(Answer.class, id);
         return answer;
     }

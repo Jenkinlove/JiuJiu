@@ -29,6 +29,12 @@
     <bean id="entanglerDao" class="com.company.dao.EntanglerDaoImpl">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="entanglerCommentDao" class="com.company.dao.EntanglerCommentDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <bean id="entanglerDelDao" class="com.company.dao.EntanglerDelDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+     </bean>
 
 
 </beans>

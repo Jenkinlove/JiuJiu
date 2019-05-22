@@ -18,6 +18,6 @@ public class AnswerController {
     public String answer(Model model){
         Answer answer = answerService.getAnswer();
         model.addAttribute("answer",answer);
-        return "/answersBooks.jsp";
+        return "/answer_book.jsp";
     }
 }

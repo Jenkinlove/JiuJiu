@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.company.domain.EntanglerComment" table="entangler_comment">
+        <id name="ec_id" column="ec_id" >
+            <generator class="native"/>
+        </id>
+        <property name="ec_date" column="ec_date"/>
+        <property name="en_comment" column="en_comment"/>
+        <!--<property name="en_comment_id" column="en_comment_id"/>-->
+
+        <!--一个评论只属于一个纠结-->
+        <many-to-one name="entangler" class="com.company.domain.Entangler" column="en_com_id"
+                     cascade="save-update" lazy="false"/>
+
+        <!--一个评论只属于一个用户-->
+        <many-to-one name="user" column="user_com_id" class="com.company.domain.User" lazy="false"/>
+
+
+    </class>
+</hibernate-mapping>

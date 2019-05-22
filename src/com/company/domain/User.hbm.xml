@@ -12,9 +12,15 @@
         <property name="uimage" column="uimage"/>
 
         <!--一个用户对应多个纠结-->
-        <set name="entanglers" inverse="true" cascade="save-update,delete" lazy="false">
-            <key column="uid"></key>
+        <set name="entanglers" inverse="true" lazy="false">
+            <key column="user_en_id"></key>
             <one-to-many class="com.company.domain.Entangler"/>
+        </set>
+
+        <!--一个用户对应多个评论-->
+        <set name="comments" lazy="false">
+            <key column="user_com_id"></key>
+            <one-to-many class="com.company.domain.EntanglerComment"/>
         </set>
 
     </class>

@@ -7,8 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
-@Transactional
 @Service("answerService")
+@Transactional
 public class AnswerServiceImpl implements AnswerService {
 
     @Resource(name = "answerDao")
