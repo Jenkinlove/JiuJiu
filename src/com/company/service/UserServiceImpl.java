@@ -27,4 +27,9 @@ public class UserServiceImpl implements UserService {
         User resUser = userDao.checkUser(user.getUsername(),user.getPassword());
         return resUser;
     }
+
+    @Override
+    public void updateUser(User user) {
+        userDao.updateUser(user);
+    }
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,4 +57,20 @@ public class UserController {
         }
 
     }
+
+    @RequestMapping("updateInfo")
+    public String updateInfo(User user,HttpSession session){
+        User resUser = (User) session.getAttribute("resUser");
+        System.out.println(resUser);
+        System.out.println("----"+user);
+        user.setUid(resUser.getUid());
+
+        userService.updateUser(user);
+        session.setAttribute("resUser",user);
+
+        return "redirect:/personPage";
+    }
+
+
+
 }

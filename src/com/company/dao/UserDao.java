@@ -8,4 +8,6 @@ public interface UserDao {
     public void saveUser(User user);
 
     public User checkUser(String username,String password);
+
+    void updateUser(User user);
 }

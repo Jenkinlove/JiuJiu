@@ -36,7 +36,7 @@
             <img src="${ctx}/img/img_user/${sessionScope.resUser.uimage}" alt="">
         </div>
         <ul>
-            <li><a href="#" class="username" title="编辑资料">${sessionScope.resUser.username}</a></li>
+            <li><a href="${ctx}/update_info.jsp" class="username" title="编辑资料">${sessionScope.resUser.username}</a></li>
             <li><a href="${ctx}/getPageData/1" class="backpage">我的首页</a></li>
         </ul>
 
@@ -64,7 +64,7 @@
                             <div class="img">
                                 <ul>
                                     <c:forTokens items="${entangler.en_img}" var="img" delims=",">
-                                        <li><img src="${ctx}/upload/${img}" alt=""></li>
+                                        <li><img src="${ctx}/img/img_user/${img}" alt=""></li>
                                     </c:forTokens>
                                 </ul>
                             </div>

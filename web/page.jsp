@@ -183,7 +183,7 @@
             <li><a href="${ctx}/personPage" >个人中心</a></li>
             <li>
                 <c:if test="${empty sessionScope.resUser}">
-                    <a href="${ctx}/login_register.jsp" target="_blank">注册/登录</a>
+                    <a href="${ctx}/login_register.jsp">注册/登录</a>
                 </c:if>
                 <c:if test="${!empty sessionScope.resUser}">
                    <%-- <img class="userimg" src="${ctx}/img/img_user/${empty
@@ -206,7 +206,7 @@
             <!--上传内容-->
             <div class="upload">
                 <!--用户头像-->
-                <div class="head_portrait"><img src="${ctx}/img/img_user/01.jpg" alt=""></div>
+                <div class="head_portrait"><img src="${ctx}/img/img_user/${sessionScope.resUser.uimage}" alt=""></div>
                 <!--上传文字图片-->
 
                 <div class="up_content">
@@ -254,7 +254,7 @@
                         <div class="img">
                             <ul>
                                 <c:forTokens items="${entangler.en_img}" delims="," var="img">
-                                    <li><img src="${ctx}/upload/${img}" alt=""></li>
+                                    <li><img src="${ctx}/img/img_user/${img}" alt=""></li>
                                </c:forTokens>
                             </ul>
                         </div>

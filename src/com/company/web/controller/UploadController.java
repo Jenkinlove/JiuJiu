@@ -23,7 +23,7 @@ public class UploadController {
 
         //确定上传地址
         ServletContext servletContext = session.getServletContext();
-        String realPath = servletContext.getRealPath("/upload");
+        String realPath = servletContext.getRealPath("/img/img_user");
         File uploadPath = new File(realPath);
         if(!uploadPath.exists()){
             uploadPath.mkdirs();
@@ -37,6 +37,6 @@ public class UploadController {
         file.transferTo(uploadPath);
 
 
-        return "page.jsp";
+        return "/update_info.jsp";
     }
 }
